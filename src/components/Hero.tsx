@@ -7,7 +7,7 @@ export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const roles = ['Frontend Developer', 'Java Developer', 'Critical Thinker'];
+  const roles = ['Frontend Developer', 'Java Developer', 'Critical Thinker','Fast Learner'];
 
   useEffect(() => {
     const currentRole = roles[currentIndex];
