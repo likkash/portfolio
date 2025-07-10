@@ -25,43 +25,43 @@ export const Projects = () => {
     {
       title: 'Protospace',
       issuer: 'Knowledge Institute of Technology',
-      image: '/placeholder.svg',
+      image: '/knowledge.jpg',
       description: 'Won 1st prize in Protospace at KIOT for developing a Biometric Voting System that ensures secure, fraud-free digital elections using fingerprint authentication.'
     },
     {
       title: 'Quiz Competition',
       issuer: 'Muthayammal Engineering College',
-      image: '/placeholder.svg',
+      image: '/muthayammal.jpg',
       description: 'Secured 1st prize in a Technology Quiz Competition at Muthayammal Engineering College, showcasing strong technical knowledge and quick thinking.'
     },
     {
       title: 'Hackathon-24',
       issuer: 'M.Kumarasamy College of Engineering',
-      image: '/placeholder.svg',
+      image: '/kumarasamy.jpg',
       description: 'Participated in my first 24-hour hackathon at Kumarasamy College of Engineering, gaining hands-on experience in rapid problem-solving and team collaboration.'
     },
     {
       title: 'MERN stack Developer',
       issuer: 'Zealous Tech Corp',
-      image: '/placeholder.svg',
+      image: '/zealous.jpg',
       description: 'Completed a MERN Stack internship at Zealous Tech Corp, where I developed a full-stack Expense Tracker web application as part of the project.'
     },
     {
       title: 'IV',
       issuer: 'Technotut',
-      image: '/placeholder.svg',
+      image: '/technotut.jpg',
       description: 'Attended an Industrial Visit and actively participated in a session at Technotut Solutions, exploring insights into the advanced technology sector and its real-world applications.'
     },
     {
       title: 'Java',
       issuer: 'Odugaatech',
-      image: '/placeholder.svg',
+      image: '/odugaa.jpg',
       description: 'Completed a Java internship at OdugaaTech, where I gained practical experience in core Java concepts and application development.'
     },
     {
       title: 'HackIndia 2025',
       issuer: 'Muthayammal Engineering College',
-      image: '/placeholder.svg',
+      image: '/hackindia.jpg',
       description: 'Participated in HackIndia 2025 held at Muthayammal Engineering College and advanced up to Round 3, gaining valuable exposure to competitive coding and innovation.'
     },
     {
