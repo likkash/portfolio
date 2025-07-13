@@ -137,7 +137,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 transition-colors"
-                  placeholder="Eg:likkashraja@gmail.com"
+                  placeholder="Eg:iloveu@gmail.com"
                 />
               </div>
 
