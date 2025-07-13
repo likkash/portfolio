@@ -11,15 +11,40 @@ export const Contact = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    toast.success('Message sent successfully!');
-    setFormData({ firstName: '', lastName: '', email: '', message: '' });
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Check if all fields are filled
+    if (
+      !formData.firstName.trim() ||
+      !formData.lastName.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
+      toast.error('Please fill in all the fields before submitting.');
+      return;
+    }
+
+    emailjs
+      .send(
+        'likkash_2004', // ✅ Your Service ID
+        'likkash_2025', // ✅ Your Template ID
+        {
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'NE-cQw9ju2HNFMX3J' // ✅ Your Public Key
+      )
+      .then(() => {
+        toast.success('Message sent successfully!');
+        setFormData({ firstName: '', lastName: '', email: '', message: '' });
+      })
+      .catch(() => toast.error('Failed to send message.'));
   };
 
   return (
@@ -137,7 +162,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 transition-colors"
-                  placeholder="Eg:iloveu@gmail.com"
+                  placeholder="Eg: iloveu@gmail.com"
                 />
               </div>
 
@@ -158,30 +183,12 @@ export const Contact = () => {
               </div>
 
               <button
-  type="button"
-  onClick={() => {
-    emailjs
-      .send(
-        'likkash_2004',          // ✅ Your Service ID
-        'likkash_2025',          // ✅ Your Template ID
-        {
-          from_name: `${formData.firstName} ${formData.lastName}`,
-          from_email: formData.email,
-          message: formData.message,
-        },
-        'NE-cQw9ju2HNFMX3J'      // ✅ Your Public Key
-      )
-      .then(() => {
-        toast.success('Message sent successfully!');
-        setFormData({ firstName: '', lastName: '', email: '', message: '' });
-      })
-      .catch(() => toast.error('Failed to send message.'));
-  }}
-  className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
->
-  <Send size={20} />
-  Send Message
-</button>
+                type="submit"
+                className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+              >
+                <Send size={20} />
+                Send Message
+              </button>
             </form>
           </div>
         </div>
