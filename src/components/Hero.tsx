@@ -34,7 +34,7 @@ export const Hero = () => {
   const handleResumeDownload = () => {
     // You'll need to add your resume PDF to the public folder
     // For now, this will open a placeholder - replace with your actual resume path
-    window.open('/Likkash_IT_22IT042.pdf', '_blank');
+    window.open('/Likkash Resume.pdf', '_blank');
   };
 
   return (
